@@ -115,11 +115,11 @@ T3 ──→ T5
 
 **Done when**:
 
-- [ ] Schema exige `DATABASE_URL` não vazia e aceita `PORT` numérico com default 3000
-- [ ] Teste unitário falha o parse quando `DATABASE_URL` está ausente e quando está vazia
-- [ ] `AppModule` registra o schema no `ConfigModule`
-- [ ] Gate quick passa
-- [ ] Test count: 2 testes passam
+- [x] Schema exige `DATABASE_URL` não vazia e aceita `PORT` numérico com default 3000
+- [x] Teste unitário falha o parse quando `DATABASE_URL` está ausente e quando está vazia
+- [x] `AppModule` registra o schema no `ConfigModule`
+- [x] Gate quick passa
+- [x] Test count: 2 testes passam
 
 **Tests**: unit
 **Gate**: quick
