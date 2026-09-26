@@ -37,10 +37,10 @@
 ## Handoff
 
 - **Feature**: api-bootstrap (`.specs/features/api-bootstrap/`)
-- **Phase / Task**: Execute / T1 — scaffold NestJS no Fastify
-- **Completed**: Specify, Design, Tasks
-- **In-progress**: T1 ainda sem arquivos de aplicação
-- **Next step**: gerar o app com o CLI em diretório temporário e copiar para `finance-up-api`
+- **Phase / Task**: Execute concluído; validação PASS
+- **Completed**: T1–T6
+- **In-progress**: nenhum
+- **Next step**: primeira feature de domínio da API, quando for pedida
 - **Blockers**: none
-- **Uncommitted files**: `.specs/`
-- **Branch**: git ainda não iniciado
+- **Uncommitted files**: none
+- **Branch**: main
