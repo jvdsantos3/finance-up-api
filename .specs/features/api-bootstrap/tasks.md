@@ -143,11 +143,11 @@ T3 ──→ T5
 
 **Done when**:
 
-- [ ] `.env.example` define `DATABASE_URL=postgres://finance:finance@localhost:5432/finance`
-- [ ] Compose publica `5432` e usa o mesmo user, senha e database
-- [ ] Teste unitário compara os quatro valores
-- [ ] Gate quick passa
-- [ ] Test count: 1 teste passa
+- [x] `.env.example` define `DATABASE_URL=postgres://finance:finance@localhost:5432/finance`
+- [x] Compose publica `5432` e usa o mesmo user, senha e database
+- [x] Teste unitário compara os quatro valores
+- [x] Gate quick passa
+- [x] Test count: 1 teste passa
 
 **Tests**: unit
 **Gate**: quick
