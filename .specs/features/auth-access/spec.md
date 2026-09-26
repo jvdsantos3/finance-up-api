@@ -92,18 +92,18 @@ O finance-up organiza a vida financeira de quem usa o produto. Antes de contas e
 
 | Requirement ID | Story | Phase | Status |
 | --- | --- | --- | --- |
-| AUTH-01 | P1: seed do admin | Execute | Implemented |
-| AUTH-02 | P1: cadastro público no perfil Usuario | Execute | Implemented |
-| AUTH-03 | P1: e-mail duplicado | Execute | Implemented |
-| AUTH-04 | P1: login com access e cookie de refresh | Execute | Implemented |
-| AUTH-05 | P1: login inválido indistinguível | Execute | Implemented |
-| AUTH-06 | P1: refresh rotaciona | Execute | Implemented |
-| AUTH-07 | P1: logout revoga na hora | Execute | Implemented |
-| AUTH-08 | P1: /me sem permissão de admin | Execute | Implemented |
-| AUTH-09 | P1: rota sem permissão responde 403 | Execute | Implemented |
-| AUTH-10 | P1: Admin do seed tem o catálogo inteiro | Execute | Implemented |
-| AUTH-11 | P1: REDIS_URL ausente aborta o boot | Execute | Implemented |
-| AUTH-12 | P1: Redis fora do ar responde 503 no login | Execute | Implemented |
+| AUTH-01 | P1: seed do admin | Execute | Verified |
+| AUTH-02 | P1: cadastro público no perfil Usuario | Execute | Verified |
+| AUTH-03 | P1: e-mail duplicado | Execute | Verified |
+| AUTH-04 | P1: login com access e cookie de refresh | Execute | Verified |
+| AUTH-05 | P1: login inválido indistinguível | Execute | Verified |
+| AUTH-06 | P1: refresh rotaciona | Execute | Verified |
+| AUTH-07 | P1: logout revoga na hora | Execute | Verified |
+| AUTH-08 | P1: /me sem permissão de admin | Execute | Verified |
+| AUTH-09 | P1: rota sem permissão responde 403 | Execute | Verified |
+| AUTH-10 | P1: Admin do seed tem o catálogo inteiro | Execute | Verified |
+| AUTH-11 | P1: REDIS_URL ausente aborta o boot | Execute | Verified |
+| AUTH-12 | P1: Redis fora do ar responde 503 no login | Execute | Verified |
 
 **Coverage:** 12 total, 12 mapped to `test/auth.e2e-spec.ts` e `test/bootstrap.e2e-spec.ts`, 0 unmapped
 

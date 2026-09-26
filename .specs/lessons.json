@@ -1,0 +1,45 @@
+{
+  "schema": 1,
+  "promote_threshold": 2,
+  "window_days": 45,
+  "quarantine_threshold": 2,
+  "next_id": 3,
+  "lessons": [
+    {
+      "id": "L-001",
+      "key": "ac_gap::after logout assert both access and refresh are rejected on the next use not only the access token",
+      "text": "After logout, assert both access and refresh are rejected on the next use, not only the access token",
+      "signal": "ac_gap",
+      "scope": "auth,sessions",
+      "status": "candidate",
+      "features": [
+        "auth-access"
+      ],
+      "recurrence": 1,
+      "harmful": 0,
+      "evidence": [
+        "AUTH-07 (auth,sessions)"
+      ],
+      "created": "2026-09-26T15:40:20Z",
+      "last_seen": "2026-09-26T15:40:20Z"
+    },
+    {
+      "id": "L-002",
+      "key": "ac_gap::when the spec requires boot failure for a missing env var add a schema or bootstrap test that omits that var and asserts non zero exit",
+      "text": "When the spec requires boot failure for a missing env var, add a schema or bootstrap test that omits that var and asserts non-zero exit",
+      "signal": "ac_gap",
+      "scope": "config,bootstrap",
+      "status": "candidate",
+      "features": [
+        "auth-access"
+      ],
+      "recurrence": 1,
+      "harmful": 0,
+      "evidence": [
+        "spec.md edge: ADMIN_EMAIL|ADMIN_PASSWORD missing (config,bootstrap)"
+      ],
+      "created": "2026-09-26T15:40:20Z",
+      "last_seen": "2026-09-26T15:40:20Z"
+    }
+  ]
+}

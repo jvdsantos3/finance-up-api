@@ -45,10 +45,10 @@
 ## Handoff
 
 - **Feature**: auth-access (`.specs/features/auth-access/`)
-- **Phase / Task**: Execute — implementação pronta, validação pendente
-- **Completed**: spec, contexto, AD-005, Redis, identidade, sessão e testes e2e
-- **In-progress**: Verifier
-- **Next step**: validar AUTH-01..AUTH-12
+- **Phase / Task**: Validação PASS
+- **Completed**: AUTH-01..AUTH-12, Redis, identidade e sessão
+- **In-progress**: nenhum
+- **Next step**: próximo domínio financeiro, quando for pedido
 - **Blockers**: nenhum
-- **Uncommitted files**: nenhum depois do commit de auth
+- **Uncommitted files**: nenhum depois do commit da validação
 - **Branch**: main
