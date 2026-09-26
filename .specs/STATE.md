@@ -34,13 +34,21 @@
 - **Date**: 2026-09-26
 - **Status**: active
 
+### AD-005
+- **Decision**: Redis guarda estado efêmero da API: blacklist de access token, refresh token e cache de permissões.
+- **Reason**: O logout precisa invalidar o JWT na hora, e o refresh rotaciona com TTL. O Postgres continua dono de usuários, perfis e permissões.
+- **Trade-off**: Se o Redis reiniciar, as sessões abertas caem e o cache esfria. Os usuários permanecem.
+- **Scope**: Autenticação e cache de autorização
+- **Date**: 2026-09-26
+- **Status**: active
+
 ## Handoff
 
-- **Feature**: api-bootstrap (`.specs/features/api-bootstrap/`)
-- **Phase / Task**: Execute concluído; validação PASS
-- **Completed**: T1–T6
-- **In-progress**: nenhum
-- **Next step**: primeira feature de domínio da API, quando for pedida
-- **Blockers**: none
-- **Uncommitted files**: none
+- **Feature**: auth-access (`.specs/features/auth-access/`)
+- **Phase / Task**: Execute — implementação pronta, validação pendente
+- **Completed**: spec, contexto, AD-005, Redis, identidade, sessão e testes e2e
+- **In-progress**: Verifier
+- **Next step**: validar AUTH-01..AUTH-12
+- **Blockers**: nenhum
+- **Uncommitted files**: nenhum depois do commit de auth
 - **Branch**: main

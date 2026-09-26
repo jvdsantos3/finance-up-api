@@ -48,6 +48,21 @@ describe('bootstrap', () => {
     await execFileAsync('pnpm', ['build'], { cwd: process.cwd() });
   }, 60_000);
 
+  it('exits without listening when REDIS_URL is missing', async () => {
+    const result = await runMain(
+      childEnv({
+        DATABASE_URL: 'postgres://finance:finance@127.0.0.1:1/finance',
+        REDIS_URL: undefined,
+        JWT_ACCESS_SECRET: 'test-access-secret-with-32-characters',
+        ADMIN_EMAIL: 'admin@finance.test',
+        ADMIN_PASSWORD: 'password-admin',
+      }),
+    );
+
+    expect(result.code).not.toBe(0);
+    expect(result.output).not.toContain('Nest application successfully started');
+  });
+
   it('exits without listening when DATABASE_URL is missing', async () => {
     const result = await runMain(childEnv({ DATABASE_URL: undefined }));
 
@@ -68,6 +83,10 @@ describe('bootstrap', () => {
     const result = await runMain(
       childEnv({
         DATABASE_URL: 'postgres://finance:finance@127.0.0.1:1/finance',
+        REDIS_URL: 'redis://127.0.0.1:6379',
+        JWT_ACCESS_SECRET: 'test-access-secret-with-32-characters',
+        ADMIN_EMAIL: 'admin@finance.test',
+        ADMIN_PASSWORD: 'password-admin',
         PORT: String(address.port),
       }),
     );

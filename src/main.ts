@@ -11,7 +11,7 @@ export async function bootstrap(): Promise<void> {
     AppModule,
     new FastifyAdapter(),
   );
-  setupApp(app);
+  await setupApp(app);
   await app.listen(process.env.PORT ?? 3000, '0.0.0.0');
 }
 

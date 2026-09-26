@@ -1,8 +1,10 @@
 import { StandardSchemaValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import type { NestFastifyApplication } from '@nestjs/platform-fastify';
+import cookie from '@fastify/cookie';
 
-export function setupApp(app: NestFastifyApplication) {
+export async function setupApp(app: NestFastifyApplication) {
+  await app.register(cookie);
   app.useGlobalPipes(new StandardSchemaValidationPipe());
 
   const config = new DocumentBuilder()
