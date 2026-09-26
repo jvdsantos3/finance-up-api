@@ -11,6 +11,7 @@ export async function createTestApp() {
   process.env.JWT_ACCESS_SECRET ??= 'test-access-secret-with-32-characters';
   process.env.ADMIN_EMAIL ??= 'admin@finance.test';
   process.env.ADMIN_PASSWORD ??= 'password-admin';
+  process.env.FRONTEND_ORIGIN ??= 'http://localhost:5173';
   vi.resetModules();
   const { AppModule } = await import('../src/app.module.js');
   const moduleFixture = await Test.createTestingModule({

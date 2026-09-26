@@ -19,6 +19,19 @@ describe('envSchema', () => {
       JWT_ACCESS_SECRET: 'test-access-secret-with-32-characters',
       ADMIN_EMAIL: 'admin@finance.test',
       ADMIN_PASSWORD: 'password-admin',
+      FRONTEND_ORIGIN: 'http://localhost:5173',
+    });
+
+    expect(result.success).toBe(false);
+  });
+
+  it('fails when FRONTEND_ORIGIN is missing', () => {
+    const result = envSchema.safeParse({
+      DATABASE_URL: 'postgres://finance:finance@localhost:5433/finance',
+      REDIS_URL: 'redis://localhost:6379',
+      JWT_ACCESS_SECRET: 'test-access-secret-with-32-characters',
+      ADMIN_EMAIL: 'admin@finance.test',
+      ADMIN_PASSWORD: 'password-admin',
     });
 
     expect(result.success).toBe(false);

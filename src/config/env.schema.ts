@@ -10,4 +10,5 @@ export const envSchema = z.object({
   JWT_ACCESS_SECRET: z.string().min(32),
   ADMIN_EMAIL: z.email(),
   ADMIN_PASSWORD: z.string().min(8),
+  FRONTEND_ORIGIN: z.url(),
 });

@@ -54,6 +54,7 @@ describe('auth access', () => {
     process.env.JWT_ACCESS_SECRET = 'test-access-secret-with-32-characters';
     process.env.ADMIN_EMAIL = 'admin@finance.test';
     process.env.ADMIN_PASSWORD = 'password-admin';
+    process.env.FRONTEND_ORIGIN = 'http://localhost:5173';
     await prepareDatabase();
     app = await createTestApp();
   }, 60_000);
