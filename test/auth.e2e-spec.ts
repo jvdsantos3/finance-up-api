@@ -196,6 +196,13 @@ describe('auth access', () => {
       headers: { authorization: `Bearer ${session.accessToken}` },
     });
     expect(me.statusCode).toBe(401);
+
+    const refresh = await app.inject({
+      method: 'POST',
+      url: '/auth/refresh',
+      headers: { cookie: `refresh_token=${session.refreshToken}` },
+    });
+    expect(refresh.statusCode).toBe(401);
   });
 
   it('lets the authenticated user edit their own name and password and blocks profile changes', async () => {
