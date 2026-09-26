@@ -77,14 +77,14 @@ O `finance-up-api` ainda não existe. Sem uma base NestJS com banco, validação
 
 | Requirement ID | Story | Phase | Status |
 | --- | --- | --- | --- |
-| BOOT-01 | P1: env inválido aborta o bootstrap | Specify | Pending |
-| BOOT-02 | P1: health 200 com banco up | Specify | Pending |
-| BOOT-03 | P1: health 503 com banco down | Specify | Pending |
-| BOOT-04 | P1: UI OpenAPI em `/docs` | Specify | Pending |
-| BOOT-05 | P1: documento inclui `GET /health` | Specify | Pending |
-| BOOT-06 | P1: Postgres via Docker Compose | Specify | Pending |
+| BOOT-01 | P1: env inválido aborta o bootstrap | Execute | Verified |
+| BOOT-02 | P1: health 200 com banco up | Execute | Verified |
+| BOOT-03 | P1: health 503 com banco down | Execute | Verified |
+| BOOT-04 | P1: UI OpenAPI em `/docs` | Execute | Verified |
+| BOOT-05 | P1: documento inclui `GET /health` | Execute | Verified |
+| BOOT-06 | P1: Postgres via Docker Compose | Execute | Verified |
 
-**Coverage:** 6 total, 0 mapped to tasks, 6 unmapped
+**Coverage:** 6 total, 6 mapped to tasks, 0 unmapped
 
 ---
 

@@ -9,7 +9,7 @@ Implement these tasks with the `tlc-spec-driven` skill: **activate it by name an
 ---
 
 **Design**: `.specs/features/api-bootstrap/design.md`
-**Status**: In Progress
+**Status**: Done
 
 ---
 
@@ -227,10 +227,10 @@ T3 ──→ T5
 
 **Done when**:
 
-- [ ] `GET /docs` responde 200
-- [ ] `GET /docs-json` inclui a operação `GET /health`
-- [ ] Gate full passa
-- [ ] Test count: 2 testes e2e novos passam, sem apagar os anteriores
+- [x] `GET /docs` responde 200
+- [x] `GET /docs-json` inclui a operação `GET /health`
+- [x] Gate full passa
+- [x] Test count: 2 testes e2e novos passam, sem apagar os anteriores
 
 **Tests**: e2e
 **Gate**: full

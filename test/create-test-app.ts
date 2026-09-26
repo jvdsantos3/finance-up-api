@@ -4,6 +4,7 @@ import {
   NestFastifyApplication,
 } from '@nestjs/platform-fastify';
 import { vi } from 'vitest';
+import { setupApp } from '../src/setup-app.js';
 
 export async function createTestApp() {
   vi.resetModules();
@@ -14,6 +15,7 @@ export async function createTestApp() {
   const app = moduleFixture.createNestApplication<NestFastifyApplication>(
     new FastifyAdapter(),
   );
+  setupApp(app);
   await app.init();
   await app.getHttpAdapter().getInstance().ready();
   return app;
