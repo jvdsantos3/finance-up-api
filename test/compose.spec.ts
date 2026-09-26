@@ -14,7 +14,7 @@ describe('docker compose', () => {
     expect(url.username).toBe('finance');
     expect(url.password).toBe('finance');
     expect(url.hostname).toBe('localhost');
-    expect(url.port).toBe('5432');
+    expect(url.port).toBe('5433');
     expect(url.pathname).toBe('/finance');
     expect(compose).toContain(`POSTGRES_USER: ${url.username}`);
     expect(compose).toContain(`POSTGRES_PASSWORD: ${url.password}`);

@@ -143,7 +143,7 @@ T3 ──→ T5
 
 **Done when**:
 
-- [x] `.env.example` define `DATABASE_URL=postgres://finance:finance@localhost:5432/finance`
+- [x] `.env.example` define `DATABASE_URL=postgres://finance:finance@localhost:5433/finance`
 - [x] Compose publica `5432` e usa o mesmo user, senha e database
 - [x] Teste unitário compara os quatro valores
 - [x] Gate quick passa
@@ -171,10 +171,10 @@ T3 ──→ T5
 
 **Done when**:
 
-- [ ] Token `DRIZZLE` exportado pelo `DatabaseModule`
-- [ ] Pool usa `DATABASE_URL` e `connectionTimeoutMillis: 2000`
-- [ ] `drizzle.config.ts` aponta para `src/database/schema/index.ts`
-- [ ] Gate de build passa
+- [x] Token `DRIZZLE` exportado pelo `DatabaseModule`
+- [x] Pool usa `DATABASE_URL` e `connectionTimeoutMillis: 2000`
+- [x] `drizzle.config.ts` aponta para `src/database/schema/index.ts`
+- [x] Gate de build passa
 
 **Tests**: none
 **Gate**: build
@@ -198,12 +198,12 @@ T3 ──→ T5
 
 **Done when**:
 
-- [ ] Postgres do compose no ar: `GET /health` responde 200 e `{ "status": "ok", "database": "up" }`
-- [ ] `DATABASE_URL` em host inacessível: `GET /health` responde 503 e `{ "status": "error", "database": "down" }` sem derrubar o processo
-- [ ] Processo com `DATABASE_URL` ausente encerra com código diferente de zero e não loga startup concluído
-- [ ] Porta já em uso: processo encerra com código diferente de zero
-- [ ] Gate full passa
-- [ ] Test count: 4 testes e2e passam, além dos unitários já existentes
+- [x] Postgres do compose no ar: `GET /health` responde 200 e `{ "status": "ok", "database": "up" }`
+- [x] `DATABASE_URL` em host inacessível: `GET /health` responde 503 e `{ "status": "error", "database": "down" }` sem derrubar o processo
+- [x] Processo com `DATABASE_URL` ausente encerra com código diferente de zero e não loga startup concluído
+- [x] Porta já em uso: processo encerra com código diferente de zero
+- [x] Gate full passa
+- [x] Test count: 4 testes e2e passam, além dos unitários já existentes
 
 **Tests**: e2e
 **Gate**: full
